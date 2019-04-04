@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.texture.Textures">
+   <children>
+      <Canvas fx:id="canvas" height="213.0" layoutX="865.0" width="327.0" />
+      <ListView fx:id="textures" layoutY="14.0" onMouseClicked="#select_texture" prefHeight="570.0" prefWidth="200.0" AnchorPane.topAnchor="25.0" />
+      <Text fill="#9a9595" layoutX="78.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Textures">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="search_bar" layoutY="594.0" prefHeight="25.0" prefWidth="200.0" promptText="Search an id..." />
+      <Separator layoutX="783.0" layoutY="218.0" orientation="VERTICAL" prefHeight="620.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="332.0" />
+      <Separator layoutX="786.0" layoutY="213.0" prefWidth="336.0" AnchorPane.rightAnchor="0.0" />
+      <TextField fx:id="rgb" layoutX="986.0" layoutY="216.0" prefHeight="25.0" prefWidth="200.0" />
+      <Text layoutX="892.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RGB" />
+      <Text layoutX="879.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="field1778" />
+      <Text layoutX="887.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="fileIds" />
+      <Text layoutX="878.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="field1780" />
+      <Text layoutX="879.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="field1781" />
+      <TextField fx:id="field1778" layoutX="986.0" layoutY="249.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="fileIds" layoutX="986.0" layoutY="285.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="field1780" layoutX="986.0" layoutY="320.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="field1781" layoutX="986.0" layoutY="353.0" prefHeight="25.0" prefWidth="200.0" />
+      <Text layoutX="879.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="field1786" />
+      <Text layoutX="879.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" text="field1782" />
+      <Text layoutX="879.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0" text="field1783" />
+      <TextField fx:id="field1786" layoutX="986.0" layoutY="386.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="field1782" layoutX="986.0" layoutY="422.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="field1783" layoutX="986.0" layoutY="456.0" prefHeight="25.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

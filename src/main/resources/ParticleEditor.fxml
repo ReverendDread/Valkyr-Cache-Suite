@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suite.controller.ParticleEditor">
+   <children>
+      <ListView fx:id="particles" layoutY="-1.0" onMouseClicked="#select_item" prefHeight="585.0" prefWidth="200.0" />
+      <TextField fx:id="search_bar" layoutY="584.0" prefHeight="35.0" prefWidth="200.0" promptText="Search an id.." />
+      <GridPane layoutX="214.0" layoutY="15.0" prefHeight="572.0" prefWidth="972.0">
+        <columnConstraints>
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="150.0" prefWidth="150.0" />
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="150.0" prefWidth="150.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="20.0" prefWidth="20.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="461.0" minWidth="10.0" prefWidth="126.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="376.0" minWidth="10.0" prefWidth="153.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Angle Horizontal:" GridPane.halignment="CENTER" />
+            <TextField fx:id="minimum_angle_h" GridPane.columnIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Angle Horizontal:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Angle Vertical:" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Angle Vertical:" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <TextField fx:id="maximum_angle_h" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="minimum_angle_v" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="maximum_angle_v" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="minimum_speed" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="maximum_speed" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Speed:" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Speed:" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Size:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Start Color:" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Start Color:" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Lifespan:" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Lifespan:" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+            <TextField fx:id="minimum_lifespan" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="maximum_lifespan" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="maximum_size" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Spawn Rate:" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Spawn Rate:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <TextField fx:id="minimum_spawn_rate" GridPane.columnIndex="4" />
+            <TextField fx:id="maximum_spawn_rate" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Size:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <TextField fx:id="minimum_size" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt1819:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt1847:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <TextField fx:id="anInt1819" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextField fx:id="anInt1847" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt1850:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt1851:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt1852:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Texture:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+            <TextField fx:id="anInt1850" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <TextField fx:id="anInt1851" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <TextField fx:id="anInt1852" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <TextField fx:id="anInt1840" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+            <CheckBox fx:id="active_first" mnemonicParsing="false" text="Active First" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+            <CheckBox fx:id="periodic" mnemonicParsing="false" text="Periodic" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lifetime:" GridPane.columnIndex="6" GridPane.halignment="CENTER" />
+            <TextField fx:id="lifetime" GridPane.columnIndex="7" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt1855:" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt1873:" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <CheckBox fx:id="uniform_color_variance" mnemonicParsing="false" text="Uniform Color Variance" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+            <CheckBox fx:id="aBoolean1877" mnemonicParsing="false" text="aBoolean1877" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+            <CheckBox fx:id="aBoolean1818" mnemonicParsing="false" text="aBoolean1818" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+            <CheckBox fx:id="aBoolean1874" mnemonicParsing="false" text="aBoolean1874" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+            <CheckBox fx:id="aBoolean1862" mnemonicParsing="false" text="aBoolean1862" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+            <CheckBox fx:id="aBoolean1863" mnemonicParsing="false" text="aBoolean1863" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Size Change:" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Change Speed:" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="End Speed:" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fading Color:" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fading Alpha:" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <TextField fx:id="anInt1873" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <TextField fx:id="anInt1855" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <TextField fx:id="size_change" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <TextField fx:id="change_speed" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <TextField fx:id="end_speed" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+            <TextField fx:id="fading_color" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+            <TextField fx:id="fading_alpha" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+            <ColorPicker fx:id="minimum_start_color" prefHeight="25.0" prefWidth="168.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ColorPicker fx:id="maximum_start_color" prefHeight="25.0" prefWidth="151.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

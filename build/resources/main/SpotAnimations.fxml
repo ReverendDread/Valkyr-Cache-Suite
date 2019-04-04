@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suite.controller.SpotAnimations">
+   <children>
+      <SplitPane dividerPositions="0.18336673346693386" prefHeight="620.0" prefWidth="1200.0">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="graphics_list" onMouseClicked="#select_graphics" prefHeight="589.0" prefWidth="200.0" />
+                  <TextField fx:id="search_bar" layoutY="549.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="200.0" promptText="Search an id.." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="992.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="General">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TitledPane layoutX="14.0" layoutY="14.0" prefHeight="500.0" prefWidth="321.0" text="Common" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="189.0" prefWidth="248.0">
+                                             <children>
+                                                <GridPane layoutX="7.0" layoutY="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.99999237060547" minWidth="10.0" prefWidth="102.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="182.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Model Id:" />
+                                                      <Label text="ResizeX:" GridPane.rowIndex="2" />
+                                                      <Label text="ResizeY:" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="modelId" GridPane.columnIndex="1" />
+                                                      <TextField fx:id="resizeX" prefWidth="125.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="resizeY" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <Label text="Rotation:" GridPane.rowIndex="4" />
+                                                      <Label text="Ambient:" GridPane.rowIndex="5" />
+                                                      <Label text="Contrast:" GridPane.rowIndex="6" />
+                                                      <Label text="aBoolean5215:" GridPane.rowIndex="7" />
+                                                      <Label text="Recoloring:" GridPane.rowIndex="8" />
+                                                      <Label text="Retexturing:" GridPane.rowIndex="9" />
+                                                      <Label text="anInt5203:" GridPane.rowIndex="10" />
+                                                      <Label text="aByte5216:" GridPane.rowIndex="11" />
+                                                      <TextField fx:id="rotation" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="ambient" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                      <TextField fx:id="contrast" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                      <TextField fx:id="aBoolean5215" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                      <TextField fx:id="recoloring" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                      <TextField fx:id="retexturing" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                                      <TextField fx:id="anInt5203" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                                      <TextField fx:id="aByte5216" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                                      <TextField fx:id="animation" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label text="Animation:" GridPane.rowIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

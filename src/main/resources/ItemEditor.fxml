@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suite.controller.ItemEditor">
+   <children>
+      <SplitPane dividerPositions="0.18336673346693386" prefHeight="620.0" prefWidth="1200.0">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="200.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <ListView fx:id="item_list" onMouseClicked="#select_item" prefHeight="587.0" prefWidth="200.0" />
+                  <TextField fx:id="search_bar" layoutY="588.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="200.0" promptText="Search by name or id..." />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="992.0">
+               <children>
+                  <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="992.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="General">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="992.0">
+                                 <children>
+                                    <TitledPane layoutX="14.0" layoutY="14.0" prefHeight="250.0" prefWidth="277.0" text="Common" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="217.0" prefWidth="248.0">
+                                             <children>
+                                                <GridPane layoutX="7.0" layoutY="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="74.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="158.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <TextField fx:id="name" GridPane.columnIndex="1" />
+                                                      <TextField fx:id="cost" prefWidth="125.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="team" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="equip_slot" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="equip_type" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cost:" GridPane.rowIndex="1" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Team:" GridPane.rowIndex="2" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Equip Slot:" GridPane.rowIndex="3" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Equip Type:" GridPane.rowIndex="4" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane layoutX="11.0" layoutY="273.0" prefHeight="311.0" prefWidth="590.0" text="Model" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="273.0">
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                       <content>
+                                          <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                                            <tabs>
+                                              <Tab text="General">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <GridPane prefHeight="246.0" prefWidth="970.0">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="109.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="95.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" minWidth="10.0" prefWidth="100.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <Label text="Model Zoom:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                                  <Label text="Model Y Rotation:" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                                  <Label text="Model X Offset:" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                                                  <Label text="Model Y Offset:" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                                                                  <Label text="Model X Rotation:" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                                  <TextField fx:id="zoom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                  <TextField fx:id="rotation_x" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                  <TextField fx:id="rotation_y" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                  <TextField fx:id="offset_x" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                  <TextField fx:id="offset_y" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                  <Label text="Inventory Model:" GridPane.halignment="CENTER" />
+                                                                  <TextField fx:id="inventory_model" GridPane.columnIndex="1" />
+                                                                  <TextField fx:id="male_equip_1" GridPane.columnIndex="4" />
+                                                                  <TextField fx:id="male_equip_2" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                                  <TextField fx:id="male_equip_3" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                                  <TextField fx:id="female_equip_1" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                                                  <TextField fx:id="female_equip_2" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                                                  <TextField fx:id="female_equip_3" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                                                  <Label text="Male Equip 2:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                                  <Label text="Male Equip 1:" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                                                                  <Label text="Male Equip 3:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                                  <Label text="Female Equip 1:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                                  <Label text="Female Equip 2:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                                                  <Label text="Female Equip 3:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                                                                  <TextField fx:id="modified_colors" GridPane.columnIndex="7" />
+                                                                  <TextField fx:id="modified_textures" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                                                                  <Label text="Modified Colors:" GridPane.columnIndex="6" GridPane.halignment="CENTER" />
+                                                                  <Label text="Modified Textures:" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                                  <Button mnemonicParsing="false" onAction="#dump_models" text="Dump Models" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </Tab>
+                                              <Tab text="Extras">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <GridPane layoutX="14.0" layoutY="14.0" prefHeight="246.0" prefWidth="971.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                  <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <TextField fx:id="maleOffsetX" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                  <TextField fx:id="maleOffsetY" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                  <TextField fx:id="maleOffsetZ" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                  <TextField fx:id="femaleOffsetX" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                  <TextField fx:id="femaleOffsetY" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Male Offset X:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Male Offset Y:" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Male Offset Z:" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Female Offset X:" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Female Offset Y:" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                                                                  <TextField fx:id="femaleOffsetZ" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Female Offset Z:" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                                                  <Text fill="#9a9595" strokeType="OUTSIDE" strokeWidth="0.0" text="Female Offsets" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text fill="#9a9595" strokeType="OUTSIDE" strokeWidth="0.0" text="Male Offsets" GridPane.halignment="CENTER">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text fill="#9a9595" strokeType="OUTSIDE" strokeWidth="0.0" text="Resize" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Resize X:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Resize Y:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Resize Z:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                                  <TextField fx:id="resize_x" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                                  <TextField fx:id="resize_y" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                                  <TextField fx:id="resize_z" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane layoutX="297.0" layoutY="10.0" prefHeight="250.0" prefWidth="304.0" text="Trading" AnchorPane.leftAnchor="297.0" AnchorPane.topAnchor="10.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="248.0">
+                                             <children>
+                                                <GridPane prefHeight="170.0" prefWidth="222.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="92.0" minWidth="10.0" prefWidth="92.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="120.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints vgrow="SOMETIMES" />
+                                                      <RowConstraints vgrow="SOMETIMES" />
+                                                    <RowConstraints vgrow="SOMETIMES" />
+                                                    <RowConstraints vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <TextField fx:id="noted_item" GridPane.columnIndex="1" />
+                                                      <TextField fx:id="lent_item" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="lend_item" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="note_item" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <CheckBox fx:id="unnoted" mnemonicParsing="false" text="Unnoted" GridPane.rowIndex="4" />
+                                                      <CheckBox fx:id="members" mnemonicParsing="false" text="Members" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Noted Item:" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Note Template:" GridPane.rowIndex="1" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lent Item:" GridPane.rowIndex="2" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lend Template:" GridPane.rowIndex="3" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane layoutX="613.0" layoutY="10.0" prefHeight="250.0" prefWidth="369.0" text="Miscellaneous" AnchorPane.leftAnchor="613.0" AnchorPane.rightAnchor="10.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="367.0">
+                                             <children>
+                                                <GridPane layoutX="18.6" layoutY="19.6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="212.0" prefWidth="348.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="72.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <TextField fx:id="stackable" GridPane.columnIndex="1" />
+                                                      <TextField fx:id="stack_ids" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="stack_amounts" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stackable:" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stack Ids:" GridPane.rowIndex="1" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stack Amounts:" GridPane.rowIndex="2" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Options:" GridPane.rowIndex="3" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ground Options:" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="inventory_options" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="ground_options" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Client Scripts">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="clientScripts" layoutX="14.0" layoutY="14.0" prefHeight="525.0" prefWidth="236.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                    <Label layoutX="263.0" layoutY="14.0" text="Client Scripts are useful for storing persistant data about values unique to a certain items," />
+                                    <Label layoutX="263.0" layoutY="31.0" text="such as attack animations and attack types, styles etc." />
+                                    <Label layoutX="263.0" layoutY="56.0" text="You can edit these scripts by adding or editing existing keys/values in this text box." />
+                                    <Label layoutX="263.0" layoutY="84.0" text="FORMAT:" />
+                                    <Label layoutX="321.0" layoutY="84.0" text="KEY: (key), VALUE: (value)" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

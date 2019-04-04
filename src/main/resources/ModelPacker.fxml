@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suite.controller.ModelPacker">
+   <children>
+      <ProgressBar fx:id="progress_bar" layoutX="14.0" layoutY="177.0" prefHeight="18.0" prefWidth="571.0" progress="0.0" />
+      <Button layoutX="82.0" layoutY="14.0" mnemonicParsing="false" onAction="#choose_directory" text="Choose Directory" />
+      <TextField fx:id="path" editable="false" layoutX="200.0" layoutY="14.0" prefHeight="25.0" prefWidth="385.0" />
+      <TextArea fx:id="console" editable="false" layoutX="14.0" layoutY="54.0" prefHeight="115.0" prefWidth="571.0" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#pack" prefHeight="25.0" prefWidth="61.0" text="Pack" />
+      <Text fx:id="progress_text" layoutX="280.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" />
+   </children>
+</AnchorPane>

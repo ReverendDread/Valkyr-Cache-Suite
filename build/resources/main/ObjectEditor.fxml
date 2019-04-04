@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suite.controller.ObjectEditor">
+   <children>
+      <SplitPane dividerPositions="0.18336673346693386" layoutY="-1.0" prefHeight="620.0" prefWidth="1200.0">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="object_list" onMouseClicked="#select_object" prefHeight="588.0" prefWidth="200.0" />
+                  <TextField fx:id="search_bar" layoutY="549.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="200.0" promptText="Search an id.." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="992.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="General">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TitledPane layoutX="14.0" layoutY="14.0" prefHeight="254.0" prefWidth="662.0" text="Common" AnchorPane.bottomAnchor="327.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="189.0" prefWidth="319.0">
+                                             <children>
+                                                <GridPane layoutX="7.0" layoutY="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.99999237060547" minWidth="10.0" prefWidth="110.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="157.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="156.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="140.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="182.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Name:" GridPane.halignment="CENTER" />
+                                                      <Label text="Size X:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                      <Label text="Size Y:" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                      <Label text="Clip Type:" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="name" GridPane.columnIndex="1" />
+                                                      <TextField fx:id="size_x" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="size_y" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="clip_type" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="animation" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <Label text="Animation:" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="option1" prefHeight="25.0" prefWidth="93.0" GridPane.columnIndex="4" />
+                                                      <CheckBox fx:id="projectile_clipped" mnemonicParsing="false" text="Projectile Clipped" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                      <CheckBox fx:id="isSolid" mnemonicParsing="false" text="Solid" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Click Option 1:" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Click Option 2:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Click Option 3:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Click Option 4:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Click Option 5:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="option2" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="option3" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="option4" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="option5" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane layoutX="10.0" layoutY="269.0" prefHeight="312.0" prefWidth="662.0" text="Model" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="269.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="325.0" prefWidth="406.0">
+                                             <children>
+                                                <GridPane prefHeight="170.0" prefWidth="222.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="96.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="136.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="77.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="132.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Model Ids:" GridPane.halignment="CENTER" />
+                                                      <TextField fx:id="model_ids" GridPane.columnIndex="1" />
+                                                      <TextField fx:id="model_types" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label text="Model Types:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                      <Label text="Model Size X:" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                      <Label text="Model Size Y:" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                      <Label text="Model Height:" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="modelSizeX" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="modelSizeY" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="modelHeight" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <CheckBox fx:id="nonFlatShading" mnemonicParsing="false" text="Non-Flat Shading" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                                                      <Label text="Ambient:" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                                                      <Label text="Contrast:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="ambient" GridPane.columnIndex="3" />
+                                                      <TextField fx:id="contrast" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Modified Colors:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Modified Textures:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="modified_colors" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="modified_textures" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" layoutX="679.0" layoutY="269.0" prefHeight="312.0" prefWidth="300.0" text="Position">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="445.0">
+                                             <children>
+                                                <GridPane prefHeight="242.0" prefWidth="242.0">
+                                                  <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="102.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="131.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="15.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Offset X:" GridPane.halignment="CENTER" />
+                                                      <Label text="Offset Y:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                      <Label text="Offset Height:" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="offsetX" GridPane.columnIndex="1" />
+                                                      <TextField fx:id="offsetY" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="offsetHeight" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" layoutX="679.0" layoutY="10.0" prefHeight="254.0" prefWidth="300.0" text="Config (Requires 2 transformations)">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="224.0" prefWidth="298.0">
+                                             <children>
+                                                <GridPane layoutY="6.0" prefHeight="222.0" prefWidth="298.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="ConfigId:" GridPane.halignment="CENTER" />
+                                                      <Label text="ConfigFileId:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="configId" GridPane.columnIndex="1" />
+                                                      <TextField fx:id="configFileId" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Transformations:" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="transformations" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

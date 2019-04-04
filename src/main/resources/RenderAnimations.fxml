@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suite.controller.RenderAnimations">
+   <children>
+      <SplitPane dividerPositions="0.18336673346693386" prefHeight="620.0" prefWidth="1200.0">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="animation_list" onMouseClicked="#select_animation" prefHeight="587.0" prefWidth="200.0" />
+                  <TextField fx:id="search_bar" layoutY="549.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="200.0" promptText="Search an id.." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="992.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="General">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TitledPane layoutX="14.0" layoutY="14.0" prefHeight="571.0" prefWidth="971.0" text="Common" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="189.0" prefWidth="248.0">
+                                             <children>
+                                                <GridPane layoutX="7.0" layoutY="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                                                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                                                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                                                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+                                                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Idle" />
+                                                      <Label text="Walking" GridPane.rowIndex="1" />
+                                                      <Label text="anInt3755" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="idle" GridPane.columnIndex="1" />
+                                                      <TextField fx:id="walking" prefWidth="125.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="anInt3755" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3722" GridPane.rowIndex="3" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3727" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="anInt3722" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="anInt3727" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="anInt3728" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                      <TextField fx:id="running" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3728" GridPane.rowIndex="5" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Running" GridPane.rowIndex="6" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3749" GridPane.rowIndex="7" />
+                                                      <TextField fx:id="anInt3749" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                      <TextField fx:id="anInt3746" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                      <TextField fx:id="anInt3724" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                                      <TextField fx:id="anInt3735" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3746" GridPane.rowIndex="8" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3724" GridPane.rowIndex="9" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3735" GridPane.rowIndex="10" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3736" GridPane.columnIndex="3" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anIntArrayArray3710" wrappingWidth="96.814453125" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anIntArray3732" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3744" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3745" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3726" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3747" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3748" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3720" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3750" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3751" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3752" GridPane.columnIndex="6" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3715" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3733" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Backwards" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Strafe Right" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Strafe Left" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3738" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3716" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3729" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3743" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3731" GridPane.columnIndex="9" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3739" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3737" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3730" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anIntArray3712" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anIntArray3713" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3714" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+                                                      <CheckBox fx:id="aBoolean3756" mnemonicParsing="false" text="aBoolean3756" GridPane.columnIndex="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3734" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3740" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anIntArray3742" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anIntArrayArray3753" wrappingWidth="97.814453125" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+                                                      <TextField fx:id="anInt3736" GridPane.columnIndex="4" />
+                                                      <TextField fx:id="anIntArrayArray3710" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="anIntArray3732" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="anInt3744" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="anInt3745" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="anInt3726" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                                      <TextField fx:id="anInt3747" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                                      <TextField fx:id="anInt3748" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                                      <TextField fx:id="anInt3720" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                                                      <TextField fx:id="anInt3750" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                                                      <TextField fx:id="anInt3751" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+                                                      <TextField fx:id="anInt3752" GridPane.columnIndex="7" />
+                                                      <TextField fx:id="anInt3715" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="anInt3733" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="backwards" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="strafe_right" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="strafe_left" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                                                      <TextField fx:id="anInt3738" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                                                      <TextField fx:id="anInt3716" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                                                      <TextField fx:id="anInt3729" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                                                      <TextField fx:id="anInt3743" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+                                                      <TextField fx:id="anInt3731" GridPane.columnIndex="10" />
+                                                      <TextField fx:id="anInt3739" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="anInt3737" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="anInt3730" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="anIntArray3712" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="anIntArray3713" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+                                                      <TextField fx:id="anInt3714" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+                                                      <TextField fx:id="anIntArrayArray3753" GridPane.columnIndex="10" GridPane.rowIndex="7" />
+                                                      <TextField fx:id="anInt3734" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+                                                      <TextField fx:id="anInt3740" GridPane.columnIndex="10" GridPane.rowIndex="9" />
+                                                      <TextField fx:id="anIntArray3742" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3754" GridPane.columnIndex="9" GridPane.rowIndex="10" />
+                                                      <TextField fx:id="anInt3754" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

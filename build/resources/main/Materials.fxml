@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suite.controller.MaterialEditor">
+   <children>
+      <MenuBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1000.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#save" text="Save" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ListView fx:id="mat_list" layoutY="25.0" onMouseClicked="#select" prefHeight="545.0" prefWidth="200.0" />
+      <TextField fx:id="search_bar" layoutY="568.0" prefHeight="31.0" prefWidth="200.0" promptText="Search an id.." />
+      <GridPane layoutX="200.0" layoutY="25.0" prefHeight="575.0" prefWidth="800.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="122.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="78.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox fx:id="isDetailMaterial" mnemonicParsing="false" text="HDR" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <CheckBox fx:id="aBoolean518" mnemonicParsing="false" text="aBoolean518" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <CheckBox fx:id="aBoolean538" mnemonicParsing="false" text="Transparent" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <CheckBox fx:id="aBoolean527" mnemonicParsing="false" text="aBoolean527" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <CheckBox fx:id="aBoolean544" mnemonicParsing="false" text="aBoolean544" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <CheckBox fx:id="aBoolean540" mnemonicParsing="false" text="aBoolean540" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <CheckBox fx:id="aBoolean541" mnemonicParsing="false" text="Repeat Texture" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <CheckBox fx:id="aBoolean543" mnemonicParsing="false" text="aBoolean543" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="aByte534" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField fx:id="aByte533" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextField fx:id="aByte537" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextField fx:id="anInt519" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextField fx:id="color" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <TextField fx:id="speedU" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <TextField fx:id="speedV" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <TextField fx:id="effectId" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <TextField fx:id="effectParam1" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <TextField fx:id="effectParam2" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <TextField fx:id="blending" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <Label text="Shadow Factor:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="Brightness:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label text="aByte537:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label text="anInt519:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label text="Effect Id:" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="Effect Param 1:" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label text="Effect Param 2:" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label text="Blend Type:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <Label text="Color:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Label text="Speed Horizontal" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label text="Speed Verticle" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

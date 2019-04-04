@@ -1,0 +1,11 @@
+<project>
+	<target name="Valkyr_Cache_Suite">
+	<!-- obfuscate and optimize by ProGuard -->
+	<taskdef resource="proguard/ant/task.properties" classpath="lib/proguard.jar" />
+	<proguard configuration="config.pro">
+	</proguard>
+	<move 
+		file="${dist.jar.dir}/${ant.project.name}.jar" 
+		tofile="${dist.jar}" verbose="true" overwrite="true" />
+	</target>
+</project>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="800.0" minWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.widget.WidgetEditor">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="1000.0" prefHeight="800.0" prefWidth="225.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="975.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="798.0" prefWidth="223.0">
+               <children>
+                  <Accordion prefHeight="773.0" prefWidth="223.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                    <panes>
+                      <TitledPane prefHeight="740.0" prefWidth="223.0" text="Interface 1337">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="221.0">
+                                 <children>
+                                    <Accordion layoutX="28.0" layoutY="38.0" />
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+                  <Text layoutX="71.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Components" AnchorPane.topAnchor="5.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Canvas height="600.0" layoutX="225.0" width="750.0" />
+      <TabPane layoutX="225.0" layoutY="593.0" prefHeight="200.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.0">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab text="Scripts">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="800.0" prefWidth="225.0">
+        <content>
+          <AnchorPane prefHeight="775.0" prefWidth="225.0">
+               <children>
+                  <ListView layoutY="25.0" prefHeight="773.0" prefWidth="223.0" AnchorPane.topAnchor="25.0" />
+                  <Text layoutX="86.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interfaces" AnchorPane.topAnchor="5.0" />
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

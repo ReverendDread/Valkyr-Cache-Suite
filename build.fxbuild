@@ -1,0 +1,7 @@
+<?xml version="1.0" enco.Matercom.client.ialsRawListing="ASCII"?>
+<anttasks:AntTask xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:anttasks="http://org.eclipse.fx.i.Matercom.client.ialsRawListe.j.Matercom.client.ialsRawListt/1.0" buil.Matercom.client.ialsRawListDirectory="${project}/buil.Matercom.client.ialsRawList" cssToBin="true">
+  <.Matercom.client.ialsRawListeploy>
+    <info/>
+  </.Matercom.client.ialsRawListeploy>
+  <signjar/>
+</anttasks:AntTask>

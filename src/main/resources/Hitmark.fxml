@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="620.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suite.controller.HitmarkEditor">
+   <children>
+      <ListView fx:id="hitmarks" onMouseClicked="#select_item" prefHeight="594.0" prefWidth="200.0" />
+      <TextField fx:id="search_bar" layoutY="594.0" prefHeight="25.0" prefWidth="200.0" />
+      <GridPane layoutX="200.0" prefHeight="620.0" prefWidth="480.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="font" GridPane.columnIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Font ID:" GridPane.halignment="CENTER" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Font Color:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Attack Style:" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Left Sprite:" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Middle Sprite:" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Right Sprite:" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Horizontal Speed:" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vertical Speed:" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vertical Text Offset:" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fade Speed:" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3861:" GridPane.halignment="CENTER" GridPane.rowIndex="11" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="anInt3863:" GridPane.halignment="CENTER" GridPane.rowIndex="12" />
+            <TextField fx:id="style" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="left" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="middle" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="right" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="hspeed" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField fx:id="vspeed" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextField fx:id="vTextOffset" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <TextField fx:id="fadeSpeed" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <TextField fx:id="anInt3861" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+            <TextField fx:id="anInt3863" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+            <ColorPicker fx:id="fontColor" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hitmark Text:" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <TextField fx:id="markText" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+         </children>
+      </GridPane>
+      <Canvas fx:id="canvas" height="594.0" layoutX="691.0" width="507.0" />
+      <Separator layoutX="688.0" orientation="VERTICAL" prefHeight="620.0" />
+      <Slider fx:id="slider" layoutX="773.0" layoutY="599.0" onMouseClicked="#slider" onMouseDragged="#slider" prefHeight="14.0" prefWidth="421.0" />
+      <Text layoutX="721.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Width" />
+   </children>
+</AnchorPane>
